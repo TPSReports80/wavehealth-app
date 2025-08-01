@@ -50,7 +50,6 @@ export const UsersProvider = ({ children }) => {
     users,
     loading,
     error,
-    fetchUsers,
     addUser,
   };
 

@@ -26,4 +26,4 @@ User data is managed globally using the React Context API. The `UsersContext` ha
 
 - Fetching user data from [`jsonplaceholder.typicode.com`](https://jsonplaceholder.typicode.com/users)
 - Managing loading and error states
-- Adding new users with a simulated POST request
+
