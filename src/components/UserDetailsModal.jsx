@@ -13,7 +13,7 @@ function UserDetailsModal({ open, onClose, user }) {
       aria-modal="true"
       sx={{
         backdropFilter: "blur(2px)",
-        backgroundColor: "#ecf2fe", // slate-800/25
+        backgroundColor: "rgba(0, 0, 0, 0.25)", // slate-800/25
       }}
     >
       <Box
