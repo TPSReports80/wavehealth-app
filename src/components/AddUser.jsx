@@ -74,7 +74,6 @@ function AddUser() {
     }
 
     setErrors(newErrors);
-    console.log("validateForm errors:", newErrors);
     return Object.keys(newErrors).length === 0;
   };
 

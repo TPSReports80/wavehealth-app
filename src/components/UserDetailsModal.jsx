@@ -33,7 +33,6 @@ function UserDetailsModal({ open, onClose, user }) {
       >
         {user && (
           <>
-            {/* Accent bar and close button */}
             <Box
               sx={{
                 display: "flex",

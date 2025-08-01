@@ -1,6 +1,6 @@
 # WaveHealth React App
 
-A simple React-based user list application built with Vite, TailwindCSS, MUI, and React Router. The app displays a list of users in a responsive, modern UI using MUI's DataGrid
+A simple React-based user list application built with Vite, TailwindCSS, MUI, and React Router. The app displays a list of users in a responsive, modern UI using MUI's DataGrid and is capable of adding new users locally.
 
 ## 🚀 Features
 
@@ -27,18 +27,3 @@ User data is managed globally using the React Context API. The `UsersContext` ha
 - Fetching user data from [`jsonplaceholder.typicode.com`](https://jsonplaceholder.typicode.com/users)
 - Managing loading and error states
 - Adding new users with a simulated POST request
-
-wavehealth-react-app/
-├── public/
-├── src/
-│ ├── components/ # Reusable components
-│ ├── context/ # UsersContext.js
-│ ├── pages/ # App pages and views
-│ ├── routes/ # Route definitions
-│ ├── App.jsx
-│ ├── main.jsx
-│ └── index.css
-├── .eslintrc.cjs
-├── tailwind.config.js
-├── vite.config.js
-└── package.json
