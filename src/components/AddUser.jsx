@@ -24,7 +24,6 @@ function AddUser() {
     let newValue = value;
 
     if (name === "phone") {
-      // Only allow digits, spaces, dashes, parentheses, and +
       newValue = newValue.replace(/[^0-9\s\-()+]/g, "");
     }
 
@@ -32,7 +31,7 @@ function AddUser() {
       ...prev,
       [name]: newValue,
     }));
-    // Clear error when user starts typing
+
     if (errors[name]) {
       setErrors((prev) => ({
         ...prev,
@@ -77,7 +76,7 @@ function AddUser() {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
     if (!validateForm()) {
@@ -85,33 +84,19 @@ function AddUser() {
     }
 
     setIsSubmitting(true);
+    addUser(formData);
+    setSubmitSuccess(true);
+    setFormData({
+      name: "",
+      username: "",
+      email: "",
+      phone: "",
+      website: "",
+    });
 
-    try {
-      const result = await addUser(formData);
-
-      if (result.success) {
-        setSubmitSuccess(true);
-        setFormData({
-          name: "",
-          username: "",
-          email: "",
-          phone: "",
-          website: "",
-        });
-
-        setTimeout(() => {
-          navigate("/");
-        }, 2000);
-      } else {
-        setErrors({
-          submit: result.error || "Failed to add user. Please try again.",
-        });
-      }
-    } catch (error) {
-      setErrors({ submit: "Failed to add user. Please try again." });
-    } finally {
-      setIsSubmitting(false);
-    }
+    setTimeout(() => {
+      navigate("/");
+    }, 2000);
   };
 
   return (
@@ -142,12 +127,6 @@ function AddUser() {
           {submitSuccess && (
             <Alert severity="success" className="mb-4">
               User added successfully! Redirecting to users list...
-            </Alert>
-          )}
-
-          {errors.submit && (
-            <Alert severity="error" className="mb-4">
-              {errors.submit}
             </Alert>
           )}
 

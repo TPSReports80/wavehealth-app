@@ -6,7 +6,7 @@ import UserDetailsModal from "./UserDetailsModal";
 import StatCard from "./StatCard";
 
 function UsersList() {
-  const { users, loading, error } = useUsers();
+  const { initialUsers, users, loading, error } = useUsers();
   const [selectedUser, setSelectedUser] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
@@ -76,7 +76,7 @@ function UsersList() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6 mb-4 sm:mb-6 md:mb-8">
           <StatCard value="Total Users" length={users.length} />
           <StatCard value="Active" length={users.length} />
-          <StatCard value="Performance" length="100%" />
+          <StatCard value="Newly Added" length={users.length - initialUsers} />
         </div>
 
         {/* Table Card */}

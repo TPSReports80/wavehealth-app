@@ -2,6 +2,7 @@ import { AppBar, Toolbar, Button, Box } from "@mui/material";
 import { Users, UserPlus } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
 import logo from "../assets/wavehealth-logo.png";
+
 function Navigation() {
   const navigate = useNavigate();
   const location = useLocation();

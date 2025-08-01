@@ -6,7 +6,7 @@ A simple React-based user list application built with Vite, TailwindCSS, MUI, an
 
 - ⚛️ Built with React 19 and Vite for fast development and hot module replacement
 - 🎨 Styled using TailwindCSS and MUI (Material UI)
-- 📋 Display users in a feature-rich data grid using `@mui/x-data-grid`
+- 📋 Display users in a feature-rich data grid using MUI Data Grid
 - 🔄 Centralized state management with `UsersContext`
 - 🔀 Routing support with `react-router-dom`
 - 🧪 Unit testing with Jest and Testing Library
